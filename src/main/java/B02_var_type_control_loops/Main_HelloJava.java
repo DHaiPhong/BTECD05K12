@@ -15,6 +15,29 @@ public class Main_HelloJava {
      */
     public static void main(String[] args) {
         System.out.println("Hello Sekai");
+        int s = sum(2,3);
+        System.out.println(s);
+        System.out.println(sum(4, 6));
+        System.out.println(sum(3.5, 4.5));
+        System.out.println(sum(3));
     }
-    
+
+    private  static  int sum(int a,int b){
+
+        System.out.println("int version");
+        return a+b;
+    }
+
+    private static double sum(double a,double b){
+
+        System.out.println("double version");
+        return a+b;
+    }
+    private static int sum(int k){
+        if(k>0){
+            return k + sum(k - 1);
+        }else{
+            return 0;
+        }
+    }
 }
