@@ -20,6 +20,8 @@ public class Main_HelloJava {
         System.out.println(sum(4, 6));
         System.out.println(sum(3.5, 4.5));
         System.out.println(sum(3));
+        System.out.println(interativeFactorial(4));
+        System.out.println(caculateFactorial(5));
     }
 
     private  static  int sum(int a,int b){
@@ -38,6 +40,24 @@ public class Main_HelloJava {
             return k + sum(k - 1);
         }else{
             return 0;
+        }
+    }
+    private static int interativeFactorial(int N) {
+
+        int factorial = 1;
+        for (int i = 1; i <= N; ++i){
+            factorial *=i;
+        }
+
+        return factorial;
+    }
+    private static int caculateFactorial(int N) {
+
+        if ( N != 0) {
+
+            return N * caculateFactorial(N - 1);
+        } else {
+            return 1;
         }
     }
 }
