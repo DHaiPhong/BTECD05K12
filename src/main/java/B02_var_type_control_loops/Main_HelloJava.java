@@ -22,6 +22,7 @@ public class Main_HelloJava {
         System.out.println(sum(3));
         System.out.println(interativeFactorial(4));
         System.out.println(caculateFactorial(5));
+        //System.err.println(sum(1,2,3,4,5));
     }
 
     private  static  int sum(int a,int b){
@@ -60,4 +61,5 @@ public class Main_HelloJava {
             return 1;
         }
     }
+
 }
