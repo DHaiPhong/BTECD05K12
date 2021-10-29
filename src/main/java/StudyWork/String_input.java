@@ -1,3 +1,5 @@
+package StudyWork;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
@@ -13,23 +15,27 @@ public class String_input {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("Nhap so sinh vien: ");
         Scanner myObj = new Scanner(System.in);
-        System.out.println(" Nhap vao ho ten sv, tuoi, lop, diem cac mon Toan, Ly, Hoa ");
+        int SoSV = myObj.nextInt();
+        myObj.nextLine();
+
+        for ( int i = 0; i < SoSV; ++i){
+        System.out.println(" Nhap ho ten sv");
         String HoTen = myObj.nextLine();
+        System.out.println("Nhap Tuoi: ");
         int Tuoi = myObj.nextInt();
-        int Lop = myObj.nextInt();
-        double DiemToan = myObj.nextDouble();
-        double DiemLy = myObj.nextDouble();
-        double DiemHoa = myObj.nextDouble();
-
-        System.out.println("Ho Ten: " + HoTen);
-        System.out.println("Tuoi: " + Tuoi);
-        System.out.println("Lop: " + Lop);
-        System.out.println("Diem Toan: " + DiemToan);
-        System.out.println("Diem Ly:" + DiemLy);
-        System.out.println("Diem Hoa: " + DiemHoa);
-
-        double DTB = (DiemToan + DiemLy + DiemHoa)/3;
+        myObj.nextLine();
+        System.out.println("Nhap Lop: ");
+        String Lop = myObj.nextLine();
+        System.out.println("Nhap Diem Toan");
+        float DiemToan = myObj.nextFloat();
+        System.out.println("Nhap Diem Ly");
+        float DiemLy = myObj.nextFloat();
+        System.out.println("Nhap Diem Hoa");
+        float DiemHoa = myObj.nextFloat();
+        myObj.nextLine();
+        float DTB = (DiemToan + DiemLy + DiemHoa)/3;
 
         System.out.println("Diem trung binh: " + DTB);
 
@@ -41,6 +47,7 @@ public class String_input {
             System.out.println("Xep hang: Trung Binh");
         } else {
             System.out.println("Xep hang: Yeu");
+        }
         }
         }
 
