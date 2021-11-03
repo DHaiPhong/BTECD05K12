@@ -20,30 +20,38 @@ public class String_input {
         int SoSV = myObj.nextInt();
         myObj.nextLine();
 
+        String[] HoTen = new String[SoSV];
+        int[] Tuoi = new int[SoSV];
+        String[] Lop = new String[SoSV];
+        float[] DiemToan = new float[SoSV];
+        float[] DiemLy = new float[SoSV];
+        float[] DiemHoa = new float[SoSV];
+        double[] DTB = new double[SoSV];
+
         for ( int i = 0; i < SoSV; ++i){
         System.out.println(" Nhap ho ten sv");
-        String HoTen = myObj.nextLine();
+        HoTen[i] = myObj.nextLine();
         System.out.println("Nhap Tuoi: ");
-        int Tuoi = myObj.nextInt();
+        Tuoi[i] = myObj.nextInt();
         myObj.nextLine();
         System.out.println("Nhap Lop: ");
-        String Lop = myObj.nextLine();
+        Lop[i] = myObj.nextLine();
         System.out.println("Nhap Diem Toan");
-        float DiemToan = myObj.nextFloat();
+        DiemToan[i] = myObj.nextFloat();
         System.out.println("Nhap Diem Ly");
-        float DiemLy = myObj.nextFloat();
+        DiemLy[i] = myObj.nextFloat();
         System.out.println("Nhap Diem Hoa");
-        float DiemHoa = myObj.nextFloat();
+        DiemHoa[i] = myObj.nextFloat();
         myObj.nextLine();
-        float DTB = (DiemToan + DiemLy + DiemHoa)/3;
+        double DTB[i] = (DiemToan + DiemLy + DiemHoa)/3;
 
-        System.out.println("Diem trung binh: " + DTB);
+        System.out.println("Diem trung binh: " + DTB[i]);
 
-        if ( DTB >= 8) {
+        if ( DTB[i] >= 8) {
             System.out.println("Xep hang: Gioi");
-        } else if ( 8 > DTB && DTB >= 6.5){
+        } else if ( 8 > DTB[i] && DTB[i] >= 6.5){
             System.out.println("Xep hang: Kha");
-        } else if ( 6.5 > DTB && DTB >= 5 ){
+        } else if ( 6.5 > DTB[i] && DTB[i] >= 5 ){
             System.out.println("Xep hang: Trung Binh");
         } else {
             System.out.println("Xep hang: Yeu");
