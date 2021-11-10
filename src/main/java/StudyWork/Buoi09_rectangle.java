@@ -42,13 +42,13 @@ class Rectangle {
 
     public void perimeter() {
 
-        float perimeter = length * width;
-        System.out.println("Dien tich hinh chu nhat la: " +perimeter);
+        float per = length * width;
+        System.out.println("Dien tich hinh chu nhat la: " +per);
 
     }
     public void area() {
 
-        float area = (length + width) * 2;
-        System.out.println("Chu vi hinh chu nhat la: " +area);
+        float ar = (length + width) * 2;
+        System.out.println("Chu vi hinh chu nhat la: " +ar);
     }
 }
