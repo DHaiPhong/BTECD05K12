@@ -19,9 +19,10 @@ public class Buoi09_rectangle {
         Rectangle rec = new Rectangle();
 
         rec.input();
-        rec.perimeter();
-        rec.area();
-
+        System.out.print("Chu vi hinh chu nhat la: ");
+        System.out.println(rec.perimeter());
+        System.out.print("Dien tich hinh chu nhat la: ");
+        System.out.println(rec.area());
     }
 
 }
@@ -40,15 +41,10 @@ class Rectangle {
 
     }
 
-    public void perimeter() {
-
-        float per = length * width;
-        System.out.println("Dien tich hinh chu nhat la: " +per);
-
+    public double area() {
+        return length * width;
     }
-    public void area() {
-
-        float ar = (length + width) * 2;
-        System.out.println("Chu vi hinh chu nhat la: " +ar);
+    public double perimeter() {
+        return (length + width) * 2;
     }
 }
