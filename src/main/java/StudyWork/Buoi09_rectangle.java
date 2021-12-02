@@ -19,9 +19,9 @@ public class Buoi09_rectangle {
         Rectangle rec = new Rectangle();
 
         rec.input();
-        System.out.print("Chu vi hinh chu nhat la: ");
+        System.out.printf("Chu vi hinh chu nhat la: ");
         System.out.println(rec.perimeter());
-        System.out.print("Dien tich hinh chu nhat la: ");
+        System.out.printf("Dien tich hinh chu nhat la: ");
         System.out.println(rec.area());
     }
 
