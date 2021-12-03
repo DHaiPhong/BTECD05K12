@@ -11,44 +11,84 @@ import B14_MiniProject.services.StudentDataService;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
+    public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) throws IOException {
 
-        StudentDataService service = new StudentDataService();
+       StudentDataService service = new StudentDataService();
 
        List<Student> students = service.read("./resources/student-input.txt");
 
-//        for (int i = 0; i < students.size(); ++i) {
-//
-//            System.out.println(students.get(i));
-//        }
-//
-//        service.write("./resources/student-output.txt", students);
+        String choose = null;
+        boolean exit = false;
+        StudentManager studentmanager = new StudentManager("./resources/student-input.txt");
 
-        StudentManager mng = new StudentManager();
+        showMenu();
 
-        //mng.sortByName(students);
+        while (true) {
+            choose = scanner.nextLine();
 
-        //mng.sortById(students);
+            switch (choose) {
+                case "1" :
+                    System.out.println("Add student: ");
+                    studentmanager.addStudent(scanner);
+                    break;
+                case "2" :
+                    System.out.println("Edit student: ");
+                    studentmanager.editStudent(scanner);
+                    break;
+                case "3" :
+                    System.out.println("Delete student: ");
+                    studentmanager.deleteStudent(scanner);
+                    break;
+                case "4" :
+                    System.out.println("Sort students by id: ");
+                    studentmanager.sortById();
+                    break;
+                case "5" :
+                    System.out.println("Sort students by name: ");
+                    studentmanager.sortByName();
+                    break;
+                case "6" :
+                    System.out.println("Show all students: ");
+                    studentmanager.showAll();
+                    break;
+                case "0" :
+                    System.out.println("Exit");
+                    exit = true;
+                    break;
 
+                default:
+                    System.out.println("Invalid input!");
+                    break;
 
+            }
 
-//        for (int i = 0; i < students.size(); ++i) {
-//
-//            System.out.println(students.get(i));
-//        }
+            if(exit) {
 
-//        Student findByName = mng.findByName(students, "Nguyen Van A");
-//
-//        System.out.println(findByName);
+                break;
+            }
 
-//        Student findById = mng.findById(students, 1001);
-//
-//        System.out.println(findById);
+            showMenu();
+        }
 
     }
 
+    public static void showMenu() {
+        System.out.println("------------Menu------------");
+        System.out.println("1. Add student");
+        System.out.println("2. Edit student");
+        System.out.println("3. Delete student");
+        System.out.println("4. Sort students by id");
+        System.out.println("5. Sort students by name");
+        System.out.println("6. Show all students");
+        System.out.println("0. Exit!");
+        System.out.println("----------------------------");
+        System.out.println("Please choose: ");
+    }
 
 }
